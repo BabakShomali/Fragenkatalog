@@ -77,12 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppStatus.cs" />
-    <Compile Include="BenutzerHinzufuegenForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BenutzerHinzufuegenForm.Designer.cs">
-      <DependentUpon>BenutzerHinzufuegenForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Datenhaltung\DB\MySql\Adapter.cs" />
     <Compile Include="Datenhaltung\DB\MySql\Connector.cs" />
     <Compile Include="Datenhaltung\DB\MySql\DbAdmin.cs" />
@@ -95,18 +89,6 @@
     <Compile Include="Datenhaltung\IDatenhaltung.cs" />
     <Compile Include="Datenhaltung\LoginFailedException.cs" />
     <Compile Include="Datenhaltung\UnsupportedRoleException.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrageBeantwortenForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrageBeantwortenForm.Designer.cs">
-      <DependentUpon>FrageBeantwortenForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\AttributeNotNullException.cs" />
     <Compile Include="Model\Benutzer.cs" />
@@ -118,12 +100,21 @@
     <Compile Include="Model\Schueler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BenutzerHinzufuegenForm.resx">
-      <DependentUpon>BenutzerHinzufuegenForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrageBeantwortenForm.resx">
-      <DependentUpon>FrageBeantwortenForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UI\IUserInterface.cs" />
+    <Compile Include="UI\UIException.cs" />
+    <Compile Include="UI\Windows\Forms\Adapter.cs" />
+    <Compile Include="UI\Windows\Forms\AdminUIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Windows\Forms\AdminUIForm.Designer.cs">
+      <DependentUpon>AdminUIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Windows\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Windows\Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -134,6 +125,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Windows\Forms\AdminUIForm.resx">
+      <DependentUpon>AdminUIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Windows\Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
